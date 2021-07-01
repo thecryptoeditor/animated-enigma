@@ -47,7 +47,7 @@ function App() {
 
     return (
         <div className="todo">
-            <Header Heading="This is my first react app." subHeading="Thanks for being connected."/>
+            <Header Heading="Your task list here:"/>
             <Addtodo addTodo={addTodo} />
             <Todo todoHeading="Todo list start here: " onDelete={onDelete} itemList={itemList} />
             <Footer />

@@ -15,10 +15,11 @@ export default class Todo extends React.Component {
 
 	render() {
 		return (
-			<div style={{textAlign: "center", marginTop: "20px"}}>
-				{this.props.todoHeading}
-				 { /* <TodoItem list={this.props.itemList} parentCallback={this.callbackFunction}/> */}
-				 <TodoItem itemList={this.props.itemList} key={this.props.itemList.title} onDelete={this.props.onDelete}/>
+			<div className="container">
+				<div style={{marginTop: "40px"}}>
+					<h5>{this.props.todoHeading}</h5>
+					<TodoItem itemList={this.props.itemList} key={this.props.itemList.title} onDelete={this.props.onDelete}/>
+				</div>
 			</div>
 		);
 	}
