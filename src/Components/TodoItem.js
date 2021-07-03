@@ -18,7 +18,7 @@ export default class TodoItem extends Component {
 
 	render(){ 
 		return (
-			<div className="container">
+			<div className="container" style={{ marginBottom: "56px" }}>
 				{this.props.itemList.map((item) => {
 					return <div key={item.title}>
 						<div style={{padding: "20px 0px", borderBottom: "1px solid #E1DEDE"}}>

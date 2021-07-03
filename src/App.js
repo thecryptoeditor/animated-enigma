@@ -13,38 +13,29 @@ import {
 function App() {
 
     let initTodo;
-
     if(localStorage.getItem("itemList") === null) {
         initTodo = [];
-        console.log("test1")
     }
     else {
         initTodo = JSON.parse(localStorage.getItem("itemList"))
-        console.log("test2")
     }
 
     const onDelete = (todos) => {
-        console.log("Delete function work properlly", todos);
-
-        let index = itemList.indexOf(todos);
-        console.log(index)
+        // let index = itemList.indexOf(todos);
 
         setState(itemList.filter((event) => {
             return event !== todos
         }))
 
         localStorage.setItem("itemList", JSON.stringify(itemList))
-
     }
+    
     const Addtodovalue   = (newTitle, task) => {
-        console.log(newTitle, task)
-
         let addNewItem = {
             title: newTitle,
             task: task
         }
         setState([...itemList, addNewItem]);
-
     }
 
     // Here we take any function name just like 'setState'
@@ -55,7 +46,7 @@ function App() {
     useEffect(()=> {
         localStorage.setItem("itemList", JSON.stringify(itemList));
     }, [itemList])
-        
+
     return (
         <Router>
             <div className="todo">
@@ -69,12 +60,12 @@ function App() {
                             <>    
                                 <Addtodo Addtodovalue={Addtodovalue} />
                                 <Todo todoHeading="Todo list start here: " onDelete={onDelete} itemList={itemList} />
-                                <Footer />
                             </>
                         )}}>
                         
                     </Route>
                 </Switch>
+                <Footer />
             </div>
         </Router>
     );
