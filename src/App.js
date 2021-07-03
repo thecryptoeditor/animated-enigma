@@ -21,21 +21,22 @@ function App() {
     }
 
     const onDelete = (todos) => {
-        // let index = itemList.indexOf(todos);
-
         setState(itemList.filter((event) => {
             return event !== todos
         }))
 
         localStorage.setItem("itemList", JSON.stringify(itemList))
+
+        headingValue();
     }
-    
-    const Addtodovalue   = (newTitle, task) => {
+
+    const Addtodovalue = (newTitle, task) => {
         let addNewItem = {
             title: newTitle,
             task: task
         }
         setState([...itemList, addNewItem]);
+        headingValue();
     }
 
     // Here we take any function name just like 'setState'
@@ -46,6 +47,16 @@ function App() {
     useEffect(()=> {
         localStorage.setItem("itemList", JSON.stringify(itemList));
     }, [itemList])
+
+    const headingValue = (todos) => {
+        // console.log(todos.length)
+        if(todos === 0){
+            return 'Your list will be display here:'
+        }
+        else {
+            return 'Here is your task list:'
+        }
+    }
 
     return (
         <Router>
@@ -59,7 +70,7 @@ function App() {
                         return (
                             <>    
                                 <Addtodo Addtodovalue={Addtodovalue} />
-                                <Todo todoHeading="Todo list start here: " onDelete={onDelete} itemList={itemList} />
+                                <Todo todoHeading={headingValue(itemList)} onDelete={onDelete} itemList={itemList} />
                             </>
                         )}}>
                         
