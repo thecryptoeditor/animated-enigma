@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-export const Addtodo = ({addTodo}) => {
+export const Addtodo = ({Addtodovalue}) => {
 	const [newTitle, setTitle] = useState("");
 	const [task, setTask] = useState("");
 
 	const formSubmit = (evt) => {
 		evt.preventDefault();
-		addTodo(newTitle, task);
+		Addtodovalue(newTitle, task);
 
 		setTitle("");
 		setTask("");
