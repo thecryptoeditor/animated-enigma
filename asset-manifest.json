@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/animated-enigma/static/js/main.ffd4a84f.chunk.js",
+    "main.js.map": "/animated-enigma/static/js/main.ffd4a84f.chunk.js.map",
+    "runtime-main.js": "/animated-enigma/static/js/runtime-main.5293096e.js",
+    "runtime-main.js.map": "/animated-enigma/static/js/runtime-main.5293096e.js.map",
+    "static/js/2.bbd6a1f3.chunk.js": "/animated-enigma/static/js/2.bbd6a1f3.chunk.js",
+    "static/js/2.bbd6a1f3.chunk.js.map": "/animated-enigma/static/js/2.bbd6a1f3.chunk.js.map",
+    "static/js/3.d13cf97e.chunk.js": "/animated-enigma/static/js/3.d13cf97e.chunk.js",
+    "static/js/3.d13cf97e.chunk.js.map": "/animated-enigma/static/js/3.d13cf97e.chunk.js.map",
+    "index.html": "/animated-enigma/index.html",
+    "static/js/2.bbd6a1f3.chunk.js.LICENSE.txt": "/animated-enigma/static/js/2.bbd6a1f3.chunk.js.LICENSE.txt",
+    "static/media/heart.c281b201.png": "/animated-enigma/static/media/heart.c281b201.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5293096e.js",
+    "static/js/2.bbd6a1f3.chunk.js",
+    "static/js/main.ffd4a84f.chunk.js"
+  ]
+}
